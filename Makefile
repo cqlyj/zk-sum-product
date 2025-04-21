@@ -7,3 +7,6 @@ setup-key:
 generate-key:
 	@snarkjs groth16 setup outputs/sum_product.r1cs outputs/pot10.ptau outputs/sum_product_final.zkey && \
 	snarkjs zkey export verificationkey outputs/sum_product_final.zkey outputs/verification_key.json
+
+generate-witness:
+	@node outputs/sum_product_js/generate_witness.js outputs/sum_product_js/sum_product.wasm inputs/input.json outputs/witness.wtns
