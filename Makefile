@@ -10,3 +10,6 @@ generate-key:
 
 generate-witness:
 	@node outputs/sum_product_js/generate_witness.js outputs/sum_product_js/sum_product.wasm inputs/input.json outputs/witness.wtns
+
+generate-proof:
+	@snarkjs groth16 prove outputs/sum_product_final.zkey outputs/witness.wtns outputs/proof.json outputs/public.json
