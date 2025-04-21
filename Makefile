@@ -13,3 +13,6 @@ generate-witness:
 
 generate-proof:
 	@snarkjs groth16 prove outputs/sum_product_final.zkey outputs/witness.wtns outputs/proof.json outputs/public.json
+
+verify-proof:
+	@snarkjs groth16 verify outputs/verification_key.json outputs/public.json outputs/proof.json
